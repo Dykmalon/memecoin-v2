@@ -9,10 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^1.6.1",
+    "dotenv": "^16.3.1",
     "eslint": "8.53.0",
     "eslint-config-next": "14.0.2",
-    "next": "14.0.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "express": "^4.18.2",
+    "firebase": "^10.6.0",
+    "next": "^14.0.2",
+    "node-fetch": "^3.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-twitter-widgets": "^1.11.0",
+    "twit": "^2.2.11"
   }
 }
