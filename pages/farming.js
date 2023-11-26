@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { auth, db } from './firebase';
+import { auth, db } from './utils/firebase';
 import Layout from '../components/Layout';
 import Bg from '../components/Bg';
 import { useRouter } from 'next/router';
