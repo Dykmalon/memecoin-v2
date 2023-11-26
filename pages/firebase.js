@@ -2,6 +2,7 @@
 import firebase from 'firebase/compat/app'; // Change this line
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore'; 
+import React, { useEffect, useState } from 'react';
 
 try {
   // Check if Firebase is already initialized
