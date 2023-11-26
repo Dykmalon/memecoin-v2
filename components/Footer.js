@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Footer = () => {
     return (
-        <div>
+        <div className="ft-position">
             <footer className={styles.footer}>
              
       

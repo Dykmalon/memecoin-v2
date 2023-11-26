@@ -11,6 +11,7 @@ const Home = () => {
   const [user, setUser] = useState(null);
   const [points, setPoints] = useState(0);
   const [completedTasks, setCompletedTasks] = useState([]);
+  const [processing, setProcessing] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -58,18 +59,23 @@ const Home = () => {
     const updatedPoints = points + 100;
     const updatedCompletedTasks = [...completedTasks, taskNumber];
 
-    // Update points and completed tasks in the database
-    await db.collection('users').doc(uid).set(
-      {
-        points: updatedPoints,
-        completedTasks: updatedCompletedTasks,
-      },
-      { merge: true }
-    );
+    // Display "Processing..." message
+    setProcessing(true);
+    setTimeout(async () => {
+      // Update points and completed tasks in the database
+      await db.collection('users').doc(uid).set(
+        {
+          points: updatedPoints,
+          completedTasks: updatedCompletedTasks,
+        },
+        { merge: true }
+      );
 
-    // Update state with the new points value and completed tasks
-    setPoints(updatedPoints);
-    setCompletedTasks(updatedCompletedTasks);
+      // Update state with the new points value and completed tasks
+      setPoints(updatedPoints);
+      setCompletedTasks(updatedCompletedTasks);
+      setProcessing(false); // Remove "Processing..." message
+    }, 60000); // 1 minute delay
   };
 
   const handleLogout = async () => {
@@ -128,12 +134,12 @@ const Home = () => {
           {user ? (
             <div className="farm-land">
               <div className="box-farming">
-                <div>
-                  <div>
+                <div className="points-box">
+                  <div className="inner-box">
                     <h1>DROP POINTS</h1>
                     <div className="board">
                       Hello, {user.displayName}! <br />
-                      {points}
+                      {processing ? 'Processing...' : points}
                     </div>
                   </div>
                 </div>
