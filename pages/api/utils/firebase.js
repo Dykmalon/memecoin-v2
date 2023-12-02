@@ -10,12 +10,12 @@ try {
 } catch (error) {
   // If not, initialize Firebase with your configuration
   firebase.initializeApp({
-    apiKey: 'AIzaSyDkFCJjHwBaTL0mURavgECMbqq_9CEKrmw',
-    authDomain: 'my-project-1513428656977.firebaseapp.com',
-    projectId: 'my-project-1513428656977',
-    storageBucket: 'my-project-1513428656977.appspot.com',
-    messagingSenderId: '932271568935',
-    appId: '1:932271568935:web:48837b5d2b6d69001bb602',
+    apiKey: 'AIzaSyBikF5NvyrMg4tlhsFZkIbWtzPzSUO4v_8',
+    authDomain: 'rich-synapse-208705.firebaseapp.com',
+    projectId: 'rich-synapse-208705',
+    storageBucket: 'rich-synapse-208705.appspot.com',
+    messagingSenderId: '81509751606',
+    appId: '1:81509751606:web:703b94ba9dac8d61827197',
   });
 }
 

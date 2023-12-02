@@ -2,10 +2,10 @@
 const Twit = require('twit');
 
 const twitterConfig = {
-  consumer_key: 'FylUUlAJWi4NWwYc9W21tOPXN',
-  consumer_secret: 'Q9EVUw0VvKQHhBBycdUQP6YwlnElczJ1SLNO6ycLiHjUYQJpqU',
-  access_token: '1471210403678265344-3RzBTTYWecCIfJuKlfr6y3jNh9ceBk',
-  access_token_secret: '1HEAleIy7EJXakzjAN3SAHcWWBPnE8bfuI56Fc0YGuBvw',
+  consumer_key: 'bwIQitNMn38NJqpo7gC8pXGqT',
+  consumer_secret: 'd1fK1x7c1ZHNKMXKRwejK9fkMmzcpti5HRH0aG12TwB1Pe6YuN',
+  access_token: '1730842544001449984-TDGWUDeMWaiMmnQwdYYlhl3dUdzzmC',
+  access_token_secret: 'OWF0kgdtHLbGq7xDU43skPGe4dxfwZolVV7NMg23WxtNg',
 };
 
 const twitter = new Twit(twitterConfig);

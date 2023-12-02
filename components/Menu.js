@@ -1,3 +1,5 @@
+// Menu.js
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -37,62 +39,78 @@ const Menu = () => {
 
               <div className="bar-top">
                 <div>CONCEPT</div>
-                <div><button onClick={handleClosePopup}><img src="/close.svg" width="30px"/></button></div>
               </div>
 
-              <p className='top-para'>no promises</p>
-              <p>no expectations</p>
-              <p>just $JEFF</p>
-
+              <div className="popup-content">
+                <p>no promises</p>
+                <p>no expectations</p>
+                <p>just $JEFF</p>
+              </div>
+              <div><button onClick={handleClosePopup}><img src="/close.svg" width="30px" /></button></div>
             </div>
           )}
 
-          {/* <li>
-            <Link href="/">CONNECT X</Link>
-          </li> */}
         </ul>
       </div>
 
-      {/* Add your styles for the popup */}
       <style jsx>{`
         .popup {
           position: fixed;
-          top: 600%;
+          top: 65vh; /* Start from the top of the screen */
           left: 50%;
-          transform: translate(-50%, -50%);
-          background-color: white;
-          border: 1px solid #ccc;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          width: 43%;
+          transform: translate(-50%, -100%);
+          background:url('/cow/popup.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 48vh;
+          height: 70vh;
           display: flex;
-          position: fixed;
           font-size: 2em;
           flex-direction: column;
           align-items: center;
           text-transform: uppercase;
           padding-bottom: 20px;
-          font-family: Changa One, Impact, sans-serif;
-
+          padding-top: 14.5vh;
+          font-family: 'alfaSlab';
+          transition: transform 0.5s ease; /* Add smooth transition effect */
         }
-        .popup p{
-          margin: 0;
-          font-family: Changa One, Impact, sans-serif;
 
-          padding-bottom:10px;
+        .popup.open {
+          transform: translate(-50%, 0); /* Slide down to the center of the screen */
         }
-        .bar-top{
-          display: flex;
-          align-items: center;
-          /* align-content: center; */
-          background-color: black;
+
+        .popup-content {
+    
+          padding-top: 23%;
           width: 100%;
-          color: white;
+          border-radius: 8px;
+          text-align: center;
+        
+        }
+
+        .bar-top {
+
+          width: 100%;
+          color: black;
           font-size: 1em;
+          text-align: center;
           justify-content: space-between;
           padding: 20px;
         }
-        .top-para{
+
+        .top-para {
           padding-top: 40px;
+          margin: 0;
+          font-family: Changa One, Impact, sans-serif;
+          padding-bottom: 10px;
+        }
+
+        .popup button{
+          
+          background: transparent;
+          border: none;
+
         }
       `}</style>
     </div>

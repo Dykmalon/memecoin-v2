@@ -9,6 +9,9 @@ const Footer = () => {
              
       
          
+          
+
+                <p>© 2023 $BILLY</p>
                 <div className='social'>
                     <ul>
                         <li><a><img src="/x.svg" width="20px"/></a></li>
@@ -16,9 +19,6 @@ const Footer = () => {
                         <li><a><img src="/discord.svg" width="20px"/></a></li>
                     </ul>
                 </div>
-
-                <p> © 2023 JEFF</p>
-
             </footer>
 
         </div>

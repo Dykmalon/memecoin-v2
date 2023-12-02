@@ -7,7 +7,7 @@ const { default: fetch } = require('node-fetch');
 const app = express();
 const port = process.env.PORT || 3001;
 
-const twitterBearerToken = 'AAAAAAAAAAAAAAAAAAAAAITzqwEAAAAAZNvIckZHL0LQb1mH2bOpzN57wHo%3DAvcxPYaY9FT0l2sTwLF9gjLewbdanTKj1cSnZPttehFEICYeTM';
+const twitterBearerToken = 'AAAAAAAAAAAAAAAAAAAAALw6rQEAAAAA56MjOLrnW5%2FrP%2Fjl5MQ23vL8l6M%3DJPZrpwthoin4rOkj7jREk5nvJVquzdxSRSHEbqR2dspgdXGi9F';
 
 app.use(express.json());
 

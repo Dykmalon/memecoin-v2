@@ -97,19 +97,141 @@ a {
 }
  */
 
-.task.completed {
-  pointer-events: none;
-  /* Disable click events */
-  opacity: 1;
-  /* Reduce opacity to indicate it's completed */
-  /* Add any other styling you want for completed tasks */
-  background-color: #FFEB3B;
+/*FONT*/
+@font-face {
+  font-family: 'alfaSlab';
+  /* Give it a name */
+  src: url('/font/AlfaSlabOne.ttf') format('truetype');
+  /* Add more src lines for other file formats if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*BG*/
+
+.area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url(/cow/cowbg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 4;
+
+}
+
+.sun {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url(/cow/sun.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 3;
+
+}
+
+.bgColor {
+  background-color: #FEB711;
+  width: 100%;
+  height: 100%;
+}
+
+.main-land-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  /* background-image: url(/cowbg.svg); */
+  background-size: cover;
+  background-position: center;
 }
 
 
-.layout {
-  position: relative;
+.home-hero-text {
+
+  color: #000;
+  text-align: center;
+  margin-bottom: -4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
+
+.home-hero-text img {
+  width: 30em;
+}
+
+.home-hero-text h1 {
+  text-align: center;
+  padding: 0;
+  margin-bottom: 0;
+  color: #fff;
+  /* text-shadow: 0 6px 0 #000; */
+  font-size: 3rem;
+  font-weight: bolder;
+  line-height: 1;
+  font-family: 'alfaSlab';
+  letter-spacing: 5px;
+}
+
+.home-hero-text p {
+  margin-bottom: 0;
+  font-size: 7em;
+  color: black;
+  text-transform: uppercase;
+  font-family: 'alfaSlab';
+}
+
+.hero-img {
+  height: 60vh;
+  width: 60vh;
+  animation: floatAnimation 3s infinite;
+}
+
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/*FOOTER*/
+
+footer {
+
+  /* background: #FFEB3B; */
+  color: white;
+  font-family: 'alfaSlab';
+  font-size: 1.5em;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.ft-position {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  z-index: 999999;
+  bottom: -3%;
+}
+
+/*MENu*/
+
 
 .main-menu {
 
@@ -127,14 +249,13 @@ a {
 
 .main-menu li {
   color: #000;
-  background-color: #fff;
+  /* background-color: #fff; */
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  font-family: Changa One, Impact, sans-serif;
+  font-family: 'alfaSlab';
   font-size: 1.3em;
-  box-shadow: 0 4px #000;
   border: none;
   margin: 0 12px;
   cursor: pointer;
@@ -154,6 +275,171 @@ a {
 
 
 }
+
+
+/*FARMING*/
+.board {
+  background-image: url(/cow/pointboard.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 95px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+  font-family: Changa One, Impact, sans-serif;
+  font-weight: 900;
+}
+
+
+.farm-land {
+  position: relative;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+.farm-land h1 {
+  color: black;
+  font-size: 1em;
+  text-align: center;
+  font-family: 'alfaSlab';
+  letter-spacing: 2px;
+}
+
+
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 10px;
+  row-gap: 20px;
+  column-gap: 20px;
+  height: 50px;
+  margin-top: 2em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  border: solid 5px black;
+  border-radius: 10px;
+}
+
+.task:hover {
+  scale: 1.07;
+}
+
+.task p {
+
+  font-size: 1em;
+  font-family: 'alfaSlab';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+}
+
+.task.completed {
+  pointer-events: none;
+  /* Disable click events */
+  opacity: 1;
+  background-color: black;
+  color: white;
+}
+
+.boardx{
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 65%;
+  /* width: 400px;
+  height: 95px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-family: Changa One, Impact, sans-serif;
+  font-weight: 900;
+  margin-top: 20px; */
+
+}
+
+.box-farming {
+
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
+/*LOGOUT*/
+
+.logout button {
+  color: white;
+  background-color: black;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 7px;
+  padding-right: 8px;
+  font-family: 'alfaSlab';
+  font-size: 1em;
+  /* box-shadow: 0 4px #000; */
+  border: none;
+  margin: 0 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/*TOKEM*/
+.main-token {
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+
+/*END*/
+
+
+
+
+
+.layout {
+  position: relative;
+}
+
 
 /*Footer*/
 
@@ -183,56 +469,39 @@ a {
 
 }
 
-footer {
-  padding-top: 26px;
-  background: #FFEB3B;
-  color: black;
-  font-family: fantasy;
-}
-
-footer p {
-  text-align: center;
-  padding-top: 10px;
-}
 
 /*TOKEn*/
 
-.main-token {
 
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-image: url(/hero.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-}
 
 .token-land {
 
   position: relative;
   z-index: 99;
-  background-color: transparent;
+  background: url('/cow/stone.svg');
   height: 100vh;
-  background-image: url(/graph1.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 58em;
+  background-size: 60vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  width:40%;
+  flex-direction: column;
+  align-items: center;
+
 
 }
 
 .token-land div {
   padding: 10px;
-  background: white;
+  /* background: white; */
   font-size: 1.5em;
-  font-family: fantasy;
-  border: solid 10px;
+  font-family: 'alfaSlab';
+  color:black;
+  font-size:1.5em;
+  text-transform:uppercase;
 
-  margin-bottom: 7%;
 
 }
 
@@ -260,44 +529,6 @@ footer p {
 
 }
 
-.home-hero-text {
-
-  color: #000;
-  text-align: center;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: center;
-  align-items: center;
-  padding-top: 40px;
-}
-
-.home-hero-text img {
-  width: 30em;
-}
-
-.home-hero-text h1 {
-  text-align: center;
-  padding: 0;
-  margin-bottom: 0;
-  color: #fff;
-  text-shadow: 0 6px 0 #000;
-  font-size: 6rem;
-  font-weight: bolder;
-  line-height: 1;
-  margin-top: -40px;
-  font-family: Changa One, Impact, sans-serif;
-  letter-spacing: 5px;
-}
-
-.home-hero-text p {
-  margin-bottom: 0;
-  margin-top: 10px;
-  font-size: 2em;
-  color: white;
-  font-family: sans-serif;
-}
 
 /*FARMING*/
 
@@ -323,22 +554,23 @@ footer p {
 
 .twitter-intent p {
 
-  color: white;
+  color: black;
   font-size: 2.5em;
-  font-family: Changa One, Impact, sans-serif;
+  font-family:'alfaSlab';
   padding-bottom: 20px;
-  text-align:center;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 
 .twitter-intent button {
-  color: #000;
-  background-color: #fff;
+  color: white;
+  background-color: black;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  font-family: Changa One, Impact, sans-serif;
+  font-family: 'alfaSlab';
   font-size: 1.3em;
   box-shadow: 0 4px #000;
   border: none;
@@ -347,52 +579,6 @@ footer p {
 }
 
 
-.farm-land {
-  position: relative;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-
-}
-
-.ft-position {
-  position: absolute;
-  bottom: 0%;
-  width: 100%;
-  z-index: 999999;
-}
-
-.board {
-  background-image: url(/borderc.svg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 400px;
-  height: 95px;
-  text-align: center;
-  padding: 10px;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2em;
-  font-family: Changa One, Impact, sans-serif;
-  font-weight: 900;
-}
-
-.farm-land h1 {
-  color: white;
-  font-size: 2.5em;
-  text-align: center;
-  font-family: Changa One, Impact, sans-serif;
-  letter-spacing: 2px;
-}
 
 .complete {
   color: #FFEB3B;
@@ -415,12 +601,6 @@ footer p {
   align-items: center;
 }
 
-.box-farming {
-  margin-bottom: -3%;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-}
 
 .points-box {
   display: flex;
@@ -428,22 +608,7 @@ footer p {
   width: 100%;
 }
 
-.logout button {
-  color: #000;
-  background-color: #FFEB3B;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 7px;
-  padding-right: 8px;
-  font-family: Changa One, Impact, sans-serif;
-  font-size: 1em;
-  /* box-shadow: 0 4px #000; */
-  border: none;
-  margin: 0 12px;
-  cursor: pointer;
-  border-radius: 10px;
-  margin-top: 20px;
-}
+
 
 .task-grp {
   width: 62%;
@@ -451,35 +616,6 @@ footer p {
   margin-top: 30px;
 }
 
-.task {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  padding: 10px;
-  row-gap: 20px;
-  column-gap: 20px;
-  height: 50px;
-  margin-top: 2em;
-  box-shadow: 0 6px 0 #000;
-  background-image: url(/bg-task.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: lighten;
-}
-
-.task:hover {
-  scale: 1.07;
-}
-
-.task p {
-
-  font-size: 1.2em;
-  font-family: Changa One, Impact, sans-serif;
-  letter-spacing: 2px;
-
-}
 
 .comingquest {
   color: white;
@@ -490,13 +626,13 @@ footer p {
 /*BG ANIMATION*/
 
 
-.area {
+/* .area {
   background: transparent;
-  width: 100%;
-  /* height: 100vh; */
+  width: 100%; */
+/* height: 100vh; */
 
 
-}
+/* } */
 
 .circles {
   position: absolute;
@@ -928,17 +1064,6 @@ footer p {
   background-size: cover;
 }
 
-.main-land-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-  background-image: url(/assets/redhero.png);
-  background-size: cover;
-  background-position: center;
-}
 
 /*POPUP*/
 
@@ -950,12 +1075,23 @@ footer p {
 @media (max-width: 500px) {
   /* Styles for screens with a width of 500 pixels or less go here */
   /* For example, you can adjust font sizes, margins, paddings, etc. */
+  .popup{
+    font-size: 1.5em!important;
+
+  }
+  .ft-position{
+    width:70%;
+  }
 
   .home-hero-text img {
     width: 15em;
   }
 
   .home-hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .home-hero-text p {
     font-size: 4rem;
   }
 
@@ -1014,18 +1150,20 @@ footer p {
     /* align-items: center; */
     /* flex-direction: column; */
     justify-content: center;
+    width:80%;
 
   }
 
   .token-land div {
 
-    font-size: 12px;
-    font-family: fantasy;
-    border: solid 8px;
+font-size: 12px;
+    font-family: 'alfaSlab';
+    /* border: solid 8px; */
     /* margin: 10px; */
     padding: 7px;
-    margin-bottom: 27%;
+    /* margin-bottom: 27%; */
     /* margin-top: -17%;*/
+    text-align: center;
   }
 
   .box-farming {
@@ -1033,18 +1171,28 @@ footer p {
     margin-bottom: 13%;
   }
 
+  .boardx {
+ 
+    width: 97%;
+}
 
+/* 
   .popup {
     width: 90% !important;
     top: 300% !important;
-  }
+  } */
 
   .board {
-    height: 70px;
+    height: 90px;
   }
 
   .twitter-intent p {
-    font-size:2em;
+    font-size: 2em;
+  }
+
+  .hero-img{
+    width: 46vh;
+    height: 37vh;
   }
 
 }

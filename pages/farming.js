@@ -105,9 +105,9 @@ const Home = () => {
       >
         <div>
           {isTaskCompleted ? (
-            <img src="/lock.svg" alt="unlocked" width="20px" />
+            <img src="/cow/shot.svg" alt="unlocked" width="30px" />
           ) : (
-            <img src="/arrow.svg" alt="lock" width="20px" />
+            <img src="/cow/shot.svg" alt="lock" width="30px" />
           )}
         </div>
         <div>
@@ -115,9 +115,9 @@ const Home = () => {
         </div>
         <div>
           {isTaskCompleted ? (
-            <img src="/arrow.svg" alt="checkmark" width="20px" />
+            <img src="/cow/shot.svg" alt="checkmark" width="30px" />
           ) : (
-            <img src="/arrow.svg" alt="arrow" width="20px" />
+            <img src="/cow/shot.svg" alt="arrow" width="30px" />
           )}
         </div>
       </div>
@@ -143,7 +143,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div>
+                <div className="boardx">
                   {[
                     { number: 1, name: 'Tweet' },
                     { number: 2, name: 'Retweet' },
@@ -162,7 +162,7 @@ const Home = () => {
             </div>
           ) : (
             <div className="twitter-intent">
-              <p>Please connect your X account to start earning points!</p>
+              <p>Please connect your X</p>
               <button onClick={handleTwitterConnect}>CONNECT X</button>
             </div>
           )}

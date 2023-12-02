@@ -6,17 +6,20 @@ const Tokenomics = () => {
   return (
     <Layout>
       <div className="main-token">
+        <div className="main-land-bg">
+          <Bg />
+        </div>
 
-        {/* <div className="main-bg">
+        <div className="main-bg">
           <Bg/>
-        </div> */}
+        </div>
 
         <div className="token-land">
 
-            <div>NAME:$JEFF</div>
-            <div>Totall supply : 21,000,000</div>
-            <div>Limit per mint : 1000</div>
-  
+          <div>NAME:$BILLY</div>
+          <div>Totall supply : 100,000,000</div>
+          <div>Limit per mint : 1000</div>
+
         </div>
 
       </div>

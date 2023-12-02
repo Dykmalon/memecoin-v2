@@ -9,15 +9,19 @@ const Landing = () => {
             <div className="main-land">
 
                 <div className="main-land-bg">
-                    <Bg />
+                    <Bg/>
                 </div>
                 
                 <div className="home-land">
                     <div className="home-hero-text">
-                        <img src='/circle.svg' alt="Hero" />
-                        <h1>MEMECOIN <br /> WEBSITE</h1>
-                        <p>Nothing more that $JEFF</p>
+                        <h1>$BILLY</h1>
+                        <p>COWBOY</p>
                     </div>
+
+                    <div className="hero-img">
+                        <img src='/cow/cow.svg' alt="Hero" />
+                    </div>
+                         
                 </div>
             </div>
         </Layout>
